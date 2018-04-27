@@ -1,0 +1,6 @@
+# import UserMutationOps from "./userMutationOps.graphql"
+
+type Mutation {
+    user: UserMutationOps
+    test: Int
+}

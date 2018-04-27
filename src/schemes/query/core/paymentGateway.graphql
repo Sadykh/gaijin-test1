@@ -1,0 +1,9 @@
+type QueryPaymentGateway {
+    symbol: String,
+    fees: [QueryPaymentGatewayFee]
+}
+
+type QueryPaymentGatewayFee {
+    currency: String
+    value: Float
+}

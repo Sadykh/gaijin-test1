@@ -1,0 +1,22 @@
+# import QueryTransaction from "./transaction.graphql"
+# import QueryPaymentGateway from "./paymentGateway.graphql"
+# import UserQueryOps from "./../user/userQueryOps.graphql"
+
+type Query {
+    products: [QueryProduct]
+    latestTransactions: [QueryTransaction]
+    paymentGateways: [QueryPaymentGateway],
+    user: UserQueryOps
+}
+
+type QueryProduct {
+    symbol: String
+    name: String
+    prices: [QueryProductPrice]
+}
+
+type QueryProductPrice {
+    currency: String
+    buy: Float
+    sell: Float
+}

@@ -1,0 +1,49 @@
+type UserWalletQueryOps {
+    list: [UserWalletQueryWallet]
+    balanceHistory(symbol: String): [Int]
+    purchases(input: UserWalletQueryOpsPurchases!): UserWalletQueryPurchaseWrapper
+    transactions(input: UserWalletQueryOpsTransactions!): UserWalletQueryTransactionWrapper
+}
+
+type UserWalletQueryWallet {
+    symbol: String
+    name: String
+    value: Float
+    address: String
+}
+
+input UserWalletQueryOpsPurchases {
+    symbol: String
+    page: Int
+}
+
+type UserWalletQueryPurchaseWrapper {
+    page: Int
+    count: Int
+    items: [UserWalletQueryPurchase]
+}
+type UserWalletQueryPurchase {
+    datetime: Int
+    paymentGateway: String
+    amount: Float
+    rate: Float
+    hash: String
+}
+
+input UserWalletQueryOpsTransactions {
+    symbol: String
+    page: Int
+}
+
+type UserWalletQueryTransactionWrapper {
+    page: Int
+    count: Int
+    items: [UserWalletQueryTransaction]
+}
+type UserWalletQueryTransaction {
+    datetime: Int
+    address: String
+    amount: Float
+    fee: Float
+    hash: String
+}

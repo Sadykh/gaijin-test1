@@ -1,0 +1,25 @@
+type UserMutationOps {
+    create(input: createUserInput!): CreateUser
+    updatePassword(input: updatePasswordUserInput!): CreateUser
+    login(input: loginUserInput!): CreateUser,
+}
+
+input createUserInput {
+    email: String!
+    password: String!
+}
+
+input updatePasswordUserInput {
+    oldPassword: String!
+    newPassword: String!
+}
+
+type CreateUser {
+    email: String!
+    token: String!
+}
+
+input loginUserInput {
+    email: String!
+    password: String!
+}

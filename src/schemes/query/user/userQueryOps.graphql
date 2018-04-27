@@ -1,0 +1,18 @@
+# import UserWalletQueryOps from "./userWalletQueryOps.graphql"
+
+type UserQueryOps {
+    profile: UserQueryProfile
+    wallet: UserWalletQueryOps
+}
+
+type UserQueryProfile {
+    name: String
+    surname: String
+    email: String
+    language: String
+    currency: String
+    emailConfirmed: Boolean
+    passwordChangedAt: Int
+    googleAuthSecret: String
+    googleAuthEnabled: Boolean
+}

@@ -1,0 +1,33 @@
+{
+  "name": "test-backend",
+  "version": "0.0.1",
+  "description": "Backend for test",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "migration": "tsc && ./node_modules/.bin/typeorm migration:run"
+  },
+  "author": "Sadykh Sadykhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/yoldi/spw-back/issues"
+  },
+  "homepage": "https://gitlab.com/yoldi/spw-back#README",
+  "dependencies": {
+    "@types/node": "^9.6.6",
+    "bcryptjs": "^2.4.3",
+    "casual": "^1.5.19",
+    "class-validator": "^0.8.5",
+    "graphql-yoga": "^1.8.5",
+    "md5": "^2.2.1",
+    "moment": "^2.22.0",
+    "npm": "^5.8.0",
+    "pg": "^7.4.1",
+    "reflect-metadata": "^0.1.12",
+    "sqlite3": "^4.0.0",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "typeorm": "^0.2.0",
+    "typescript": "^2.8.1"
+  }
+}

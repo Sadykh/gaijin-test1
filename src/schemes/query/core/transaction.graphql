@@ -1,0 +1,5 @@
+type QueryTransaction {
+    hash: String
+    datetime: Int
+    value: Float
+}
